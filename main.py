@@ -25,23 +25,23 @@ async def set_commands(bot: Bot):
 async def start(message: types.Message):
     await message.answer('Привет, я твой первый Эхо бот', reply_markup= get_keyboard_1())
 
-@dp.message_handler(lambda message: message.text == 'Отправь фото игры')
+@dp.message_handler(lambda message: message.text == 'Отправь фото отеля')
 async def button_1_click(message: types.Message):
-    await bot.send_photo(message.chat.id, photo= 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/238320/capsule_616x353.jpg?t=1666817106', caption= 'Вот тебе игра', reply_markup= get_keyboard_inline())
+    await bot.send_photo(message.chat.id, photo= 'https://avatars.dzeninfra.ru/get-zen_doc/2404797/pub_5ec05dabc419064bb24dcdcb_5ec07408d54088764522e780/scale_1200', caption= 'Вот ваше фото и ссылки на аренду номера отелей ', reply_markup= get_keyboard_inline())
 
 @dp.message_handler(lambda message: message.text == 'Перейти на 2 клавиатуру')
 async def button_2_click(message: types.Message):
-    await message.answer('Тут ты можешь попросить отправить мем', reply_markup= get_keyboard_2())
+    await message.answer('Тут вы можете попросить ссылки на покупку билетов на самолёт и поезд', reply_markup= get_keyboard_2())
 
 
-@dp.message_handler(lambda message: message.text == 'Отправь мем')
+@dp.message_handler(lambda message: message.text == 'Отправь картинку самолёта и поезда')
 async def button_3_click(message: types.Message):
-    await bot.send_photo(message.chat.id, photo= 'https://thumb.tildacdn.com/tild6465-6132-4937-b964-336163313261/-/resize/824x/-/format/webp/mem-2-1024x683.jpg', caption= 'Вот тебе мем', reply_markup= get_keyboard_inline2())
+    await bot.send_photo(message.chat.id, photo= 'https://avatars.dzeninfra.ru/get-zen_doc/5231677/pub_63df6d803fede37a27a6d867_63df728bc190412358747cd3/scale_1200', caption= 'Вот вам ссылки на покупку билетов', reply_markup= get_keyboard_inline2())
 
 
 @dp.message_handler(lambda message: message.text == 'Перейти на 1 клавиатуру')
 async def button_4_click(message: types.Message):
-    await message.answer('Тут ты можешь попросить увидеть игру', reply_markup= get_keyboard_1())
+    await message.answer('Тут ты можешь попросить увидеть ссылки ня снятие номера в отеле', reply_markup= get_keyboard_1())
 
 
 
