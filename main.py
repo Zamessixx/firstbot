@@ -1,7 +1,7 @@
 from aiogram import Bot, Dispatcher, types, executor
 from config import TELEGRAM_TOKEN
-from  keyboard.keyboards import get_keyboard_1, get_keyboard_2
-from  keyboard.key_inline import  get_keyboard_inline, get_keyboard_inline2
+from keyboard.keyboards import get_keyboard_1, get_keyboard_2
+from keyboard.key_inline import get_keyboard_inline, get_keyboard_inline2
 
 
 bot = Bot(token= TELEGRAM_TOKEN)
@@ -41,7 +41,7 @@ async def button_3_click(message: types.Message):
 
 @dp.message_handler(lambda message: message.text == 'Перейти на 1 клавиатуру')
 async def button_4_click(message: types.Message):
-    await message.answer('Тут ты можешь попросить увидеть игру', reply_markup= get_keyboard_2())
+    await message.answer('Тут ты можешь попросить увидеть игру', reply_markup= get_keyboard_1())
 
 
 
