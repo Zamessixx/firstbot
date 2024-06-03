@@ -3,15 +3,60 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 def get_keyboard_inline():
     keyboard_inline = InlineKeyboardMarkup(row_width=2)
-    but_inline = InlineKeyboardButton('Посмотреть', url='https://travel.mts.ru/hotels/rossiya/moskva/etalon?utm_source=cvm_context_stream_tr&utm_medium=yandex_cpc&utm_campaign=stream_mtstravel_rus_hotel_dsa-feed_msk_search%7C99942866&utm_content=adset_id%3D5324905181%7Cnid%3Dnone%7Cdevice_type%3Ddesktop%7Crid%3D4912272&yclid=12748377160180826111&utm_referrer=https%3A%2F%2Fyandex.ru%2F&checkin=2024-05-30&checkout=2024-05-31&adults=2&children=0&location=cce1a1e0-9acc-4d1d-b778-1c2970845d63')
-    but_inline2 = InlineKeyboardButton('Посмотреть', url='https://www.pentamoscow.ru/')
-    keyboard_inline.add(but_inline, but_inline2)
+    but_inline = InlineKeyboardButton('Посмотреть', url='https://translated.turbopages.org/proxy_u/en-ru.ru.a4849af1-665d91ad-436d7dab-74722d776562/https/en.wikipedia.org/wiki/Army_ranks_and_insignia_of_the_Russian_Federation')
+    keyboard_inline.add(but_inline)
     return keyboard_inline
 
 def get_keyboard_inline2():
     keyboard_inline2 = InlineKeyboardMarkup(row_width=2)
-    but_inline3 = InlineKeyboardButton('Посмотреть', url='https://www.kupibilet.ru/')
-    but_inline4 = InlineKeyboardButton('Посмотреть', url='https://fstravel.com/avia/?utm_source=yandex&utm_medium=cpc&utm_campaign=Moskva_%7C_Poisk_%7C_Aviabileti_%7C_Obshie_%7C_FS&utm_content=16120523295&utm_term=ST%3Asearch%7CS%3Anone%7CAP%3Ano%7CPT%3Apremium%7CP%3A4%7CDT%3Adesktop%7CRI%3A98591%7CRN%3A%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%7CCI%3A110371913%7CGI%3A5443823162%7CPI%3A51470773623%7CAI%3A16120523295%7CKW%3A%D1%86%D0%B5%D0%BD%D0%B0%20%D0%B1%D0%B8%D0%BB%D0%B5%D1%82%20%D0%BD%D0%B0%20%D1%81%D0%B0%D0%BC%D0%BE%D0%BB%D0%B5%D1%82&calltouch_tm=yd_c%3A110371913_gb%3A5443823162_ad%3A16120523295_ph%3A51470773623_st%3Asearch_pt%3Apremium_p%3A4_s%3Anone_dt%3Adesktop_reg%3A98591_ret%3A51470773623_apt%3Anone&yclid=2779019152038035455')
-    keyboard_inline2.add(but_inline3, but_inline4)
+    but_inline3 = InlineKeyboardButton('Истребитель', url='https://ru.wikipedia.org/wiki/%D0%98%D1%81%D1%82%D1%80%D0%B5%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8C')
+    but_inline4 = InlineKeyboardButton('Танк', url='https://ru.wikipedia.org/wiki/%D0%A2%D0%B0%D0%BD%D0%BA')
+    but_inline5 = InlineKeyboardButton('Боевой вертолет', url='https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%B5%D0%B2%D0%BE%D0%B9_%D0%B2%D0%B5%D1%80%D1%82%D0%BE%D0%BB%D1%91%D1%82')
+    but_inline6 = InlineKeyboardButton('Авианосец', url='https://ru.wikipedia.org/wiki/%D0%90%D0%B2%D0%B8%D0%B0%D0%BD%D0%BE%D1%81%D0%B5%D1%86')
+    but_inline7 = InlineKeyboardButton('Ракетная установка', url='https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D0%BA%D0%B5%D1%82%D0%BD%D0%B0%D1%8F_%D0%BF%D1%83%D1%81%D0%BA%D0%BE%D0%B2%D0%B0%D1%8F_%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0')
+    but_inline8 = InlineKeyboardButton('Крылатая ракета', url='https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D1%8B%D0%BB%D0%B0%D1%82%D0%B0%D1%8F_%D1%80%D0%B0%D0%BA%D0%B5%D1%82%D0%B0')
+    keyboard_inline2.add(but_inline3, but_inline4, but_inline5, but_inline6, but_inline7, but_inline8)
     return keyboard_inline2
+
+
+def get_keyboard_inline3():
+    keyboard_inline3 = InlineKeyboardMarkup(row_width=2)
+    but1 = InlineKeyboardButton('Рядовой', url='https://ru.wikipedia.org/wiki/%D0%A0%D1%8F%D0%B4%D0%BE%D0%B2%D0%BE%D0%B9')
+    but2 = InlineKeyboardButton('Ефрейтор', url='https://ru.wikipedia.org/wiki/%D0%95%D1%84%D1%80%D0%B5%D0%B9%D1%82%D0%BE%D1%80')
+    but3 = InlineKeyboardButton('Младший сержант', url='https://ru.wikipedia.org/wiki/%D0%9C%D0%BB%D0%B0%D0%B4%D1%88%D0%B8%D0%B9_%D1%81%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D1%82')
+    but4 = InlineKeyboardButton('Сержант', url='https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D1%82')
+    but5 = InlineKeyboardButton('Старший сержант', url='https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%B0%D1%80%D1%88%D0%B8%D0%B9_%D1%81%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D1%82')
+    but6 = InlineKeyboardButton('Старшина', url='https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%B0%D1%80%D1%88%D0%B8%D0%BD%D0%B0')
+    but7 = InlineKeyboardButton('Прапорщик', url='https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%BF%D0%BE%D1%80%D1%89%D0%B8%D0%BA')
+    but8 = InlineKeyboardButton('Старший прапорщик', url='https://translated.turbopages.org/proxy_u/en-ru.ru.e801b8eb-665da14c-91890a74-74722d776562/https/en.wikipedia.org/wiki/Starshy_praporshchik')
+    keyboard_inline3.add(but1, but2, but3, but4, but5, but6, but7, but8)
+    return keyboard_inline3
+
+
+
+def get_keyboard_inline4():
+    keyboard_inline4 = InlineKeyboardMarkup(row_width=2)
+    but_1 = InlineKeyboardButton('Младший лейтенант', url='https://ru.wikipedia.org/wiki/%D0%9C%D0%BB%D0%B0%D0%B4%D1%88%D0%B8%D0%B9_%D0%BB%D0%B5%D0%B9%D1%82%D0%B5%D0%BD%D0%B0%D0%BD%D1%82')
+    but_2 = InlineKeyboardButton('Лейтинант', url='https://ru.wikipedia.org/wiki/%D0%9B%D0%B5%D0%B9%D1%82%D0%B5%D0%BD%D0%B0%D0%BD%D1%82')
+    but_3 = InlineKeyboardButton('Старший лейтенант', url='https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%B0%D1%80%D1%88%D0%B8%D0%B9_%D0%BB%D0%B5%D0%B9%D1%82%D0%B5%D0%BD%D0%B0%D0%BD%D1%82')
+    but_4 = InlineKeyboardButton('Капитан', url='https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%BF%D0%B8%D1%82%D0%B0%D0%BD_(%D0%B2%D0%BE%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%B5_%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)')
+    but_5 = InlineKeyboardButton('Майор', url='https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%B9%D0%BE%D1%80')
+    but_6 = InlineKeyboardButton('Подполковник', url='https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B4%D0%BF%D0%BE%D0%BB%D0%BA%D0%BE%D0%B2%D0%BD%D0%B8%D0%BA')
+    but_7 = InlineKeyboardButton('Полковник', url='https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%BB%D0%BA%D0%BE%D0%B2%D0%BD%D0%B8%D0%BA')
+    keyboard_inline4.add(but_1, but_2, but_3, but_4, but_5, but_6, but_7)
+    return keyboard_inline4
+
+
+def get_keyboard_inline5():
+    keyboard_inline5 = InlineKeyboardMarkup(row_width=2)
+    button_1 = InlineKeyboardButton('Генерал-майор', url='https://ru.wikipedia.org/wiki/%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB-%D0%BC%D0%B0%D0%B9%D0%BE%D1%80')
+    button_2 = InlineKeyboardButton('Генерал-лейтенант', url='https://ru.wikipedia.org/wiki/%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB-%D0%BB%D0%B5%D0%B9%D1%82%D0%B5%D0%BD%D0%B0%D0%BD%D1%82')
+    button_3 = InlineKeyboardButton('Генерал-полколвник', url='https://ru.wikipedia.org/wiki/%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB-%D0%BF%D0%BE%D0%BB%D0%BA%D0%BE%D0%B2%D0%BD%D0%B8%D0%BA')
+    button_4 = InlineKeyboardButton('Генерал-армии', url='https://ru.wikipedia.org/wiki/%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB_%D0%B0%D1%80%D0%BC%D0%B8%D0%B8_(%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F)')
+    button_5 = InlineKeyboardButton('Маршал', url='https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%80%D1%88%D0%B0%D0%BB')
+    keyboard_inline5.add(button_1, button_2, button_3, button_4, button_5)
+    return keyboard_inline5
+
+
+
 

@@ -1,78 +1,65 @@
 from aiogram import Bot, Dispatcher, types, executor
 from config import TELEGRAM_TOKEN
 from keyboard.keyboards import get_keyboard_1, get_keyboard_2
-from keyboard.key_inline import get_keyboard_inline, get_keyboard_inline2
-from database.database import initialize_db, add_user, get_user
+from keyboard.key_inline import get_keyboard_inline, get_keyboard_inline2, get_keyboard_inline3, get_keyboard_inline4, get_keyboard_inline5
 
 bot = Bot(token=TELEGRAM_TOKEN)
 dp = Dispatcher(bot)
 
-initialize_db()
-
 async def set_commands(bot: Bot):
     commands = [
         types.BotCommand(command='/start', description= 'Команда для того, чтобы запустить бота'),
-        types.BotCommand(command='/help', description='Команда для того, узнать, с чем может помочь наш бот'),
-        types.BotCommand(command='/comand3', description='Для того чтобы узнать как работает третья команда'),
-        types.BotCommand(command='/comand4', description='Для того чтобы узнать как работает четвёртая команда'),
-        types.BotCommand(command='/comand5', description='Для того чтобы узнать как работает пятая команда')
+        types.BotCommand(command='/low_ranks', description='Для того чтобы узнать какие есть низшие звания'),
+        types.BotCommand(command='/middle_ranks', description='Для того чтобы узнать какие есть средние звания'),
+        types.BotCommand(command='/highest_ranks', description='Для того чтобы узнать какие есть высшие звания')
         ]
     await bot.set_my_commands(commands)
 
 
 
-@dp.message_handler(commands= 'start')
+@dp.message_handler(commands='start')
 async def start(message: types.Message):
-    user = get_user(message.from_user.id)
-    if user is None:
-        add_user(message.from_user.id, message.from_user.username, message.from_user.first_name, message.from_user.last_name)
-        await message.answer('Привет, я твой первый Эхо бот', reply_markup=get_keyboard_1())
-    else:
-        await message.answer('Привет, я твой первый Эхо бот', reply_markup=get_keyboard_1())
+    await message.reply( 'Привет, я бот ,который поможет узнать какие есть звания в армии и военных боевых техник.')
 
 
 
-@dp.message_handler(lambda message: message.text == 'Отправь фото отеля')
+
+
+@dp.message_handler(lambda message: message.text == 'Отправь фото всех званий')
 async def button_1_click(message: types.Message):
-    await bot.send_photo(message.chat.id, photo= 'https://avatars.dzeninfra.ru/get-zen_doc/2404797/pub_5ec05dabc419064bb24dcdcb_5ec07408d54088764522e780/scale_1200', caption= 'Вот ваше фото и ссылки на аренду номера отелей ', reply_markup= get_keyboard_inline())
+    await bot.send_photo(message.chat.id, photo= 'https://i.5pages.net/files/21b/21bb5f13c32a87ddc36027fe5ebd473f.jpg', caption= 'Вот ваши звания ', reply_markup= get_keyboard_inline())
 
 @dp.message_handler(lambda message: message.text == 'Перейти на 2 клавиатуру')
 async def button_2_click(message: types.Message):
-    await message.answer('Тут вы можете попросить ссылки на покупку билетов на самолёт и поезд', reply_markup= get_keyboard_2())
+    await message.answer('Тут вы можете попросить ссылки на описание военных техник', reply_markup= get_keyboard_2())
 
 
-@dp.message_handler(lambda message: message.text == 'Отправь картинку самолёта и поезда')
+@dp.message_handler(lambda message: message.text == 'Отправь военную технику')
 async def button_3_click(message: types.Message):
-    await bot.send_photo(message.chat.id, photo= 'https://avatars.dzeninfra.ru/get-zen_doc/5231677/pub_63df6d803fede37a27a6d867_63df728bc190412358747cd3/scale_1200', caption= 'Вот вам ссылки на покупку билетов', reply_markup= get_keyboard_inline2())
+    await bot.send_photo(message.chat.id, photo= 'https://flomaster.top/uploads/posts/2022-12/1672504933_flomaster-club-p-oboronnaya-illyustratsiya-vkontakte-23.jpg', caption= 'Вот вам ссылки на описание военной техники', reply_markup= get_keyboard_inline2())
 
 
 @dp.message_handler(lambda message: message.text == 'Перейти на 1 клавиатуру')
 async def button_4_click(message: types.Message):
-    await message.answer('Тут ты можешь попросить увидеть ссылки ня снятие номера в отеле', reply_markup= get_keyboard_1())
+    await message.answer('Тут ты можете попросить узнать описание, какие есть звания в армии', reply_markup= get_keyboard_1())
 
 
 
 
-@dp.message_handler(commands= 'help')
-async def help(message: types.Message):
-    await message.reply('Я помогу тебе')
+@dp.message_handler(commands= 'low_ranks')
+async def low_ranks(message: types.Message):
+    await bot.send_photo(message.chat.id, photo='https://museum-kam.ru/800/600/https/pp.userapi.com/c845017/v845017679/7f50/zLeFspDZyi8.jpg', caption='Низшые звания', reply_markup=get_keyboard_inline3())
 
-@dp.message_handler(commands= 'comand3')
-async def comand3(message: types.Message):
-    await message.reply('команда 3')
+@dp.message_handler(commands= 'middle_ranks')
+async def middle_ranks(message: types.Message):
+    await bot.send_photo(message.chat.id, photo='https://museum-kam.ru/800/600/https/pp.userapi.com/c845017/v845017679/7f50/zLeFspDZyi8.jpg', caption='Средние звания', reply_markup=get_keyboard_inline4())
 
-@dp.message_handler(commands= 'comand4')
-async def comand4(message: types.Message):
-    await message.reply('команда 4')
-
-@dp.message_handler(commands= 'comand5')
-async def comand5(message: types.Message):
-    await message.reply('команда 5')
+@dp.message_handler(commands= 'highest_ranks')
+async def highest_ranks(message: types.Message):
+    await bot.send_photo(message.chat.id, photo='https://museum-kam.ru/800/600/https/pp.userapi.com/c845017/v845017679/7f50/zLeFspDZyi8.jpg', caption='Высшие звания', reply_markup=get_keyboard_inline5())
 
 
-@dp.message_handler()
-async def echo(message: types.Message):
-    await message.answer(message.text)
+
 
 
 
